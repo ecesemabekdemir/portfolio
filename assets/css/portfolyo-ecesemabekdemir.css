@@ -1,4 +1,3 @@
-/* Genel stiller */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -18,7 +17,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   animation: fadeIn 2s ease-in;
 }
@@ -32,13 +31,14 @@ body {
   }
 }
 
-/* Başlık */
+/*--------------------------------------Başlık */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   padding: 20px;
+  margin-top: 8px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: slideInDown 1s ease-in-out;
@@ -73,7 +73,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Hakkımda Bölümü */
+/*-------------------------------------------- Hakkımda Bölümü */
 .about {
   display: flex;
   justify-content: space-between;
@@ -152,7 +152,7 @@ body {
   }
 }
 
-/* Deneyimler Bölümü */
+/*-------------------------------------------- Deneyimler Bölümü */
 .experiences {
   display: flex;
   flex-wrap: wrap;
@@ -182,7 +182,7 @@ body {
   background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
 }
 
-/* Projeler Bölümü */
+/*---------------------------------- Projeler Bölümü */
 .projectsContainer {
   padding: 50px 0;
 }
@@ -280,4 +280,75 @@ body {
 
 .footer .socialMedia img:hover {
   transform: scale(1.2);
+}
+
+/*--------------------------------------------------------------------------------*/
+
+@media (width < 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .userPic {
+  display: none;
+  }
+
+  .header .nav-bar {
+    display: flex;
+    margin-top: 20px;
+  
+  }
+
+  .header .nav-bar a {
+    margin: 0 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .aboutText {
+    padding: 0 20px;
+  }
+
+  .aboutText h2 {
+    font-size: 28px;
+  }
+
+  .about img {
+    max-width: 200px;
+    margin-top: 20px;
+  }
+
+  .experiences {
+    padding: 30px 0;
+  }
+
+  .experince {
+    min-width: calc(50% - 10px);
+  }
+
+  .projects a {
+    min-width: calc(50% - 10px);
+  }
+
+  .footer .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .socialMedia img {
+    width: 25px;
+    margin: 5px;
+  }
 }
